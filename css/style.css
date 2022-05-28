@@ -1,0 +1,617 @@
+* {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Wrestlemania";
+    src: url(../fonts/WRESTLEMANIA.ttf);
+}
+
+body {
+    background-image: url("../img/Yellowb.jpg");
+}
+
+
+header {
+    border: inset;
+    border-radius: 20px;
+    border-color: rgb(196, 5, 5);
+    background-image: url(../img/dogo.jpg);
+    font-size: 120%;
+    grid-area: header;
+}
+
+.navegacion ul {
+    list-style: none;
+    /*  list-style-type: none; para remover los bullets */
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+
+.menu li a {
+    display: inline;
+
+    padding: 8px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(68, 46, 170);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: black;
+}
+
+h1 {
+    display: inline;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    font-family: "wrestlemania";
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 5px 5px black;
+    margin: 10px;
+    background-size: contain;
+    background-position: center;
+    /*    font-style: esto es para estilar el tipo de letra
+    font-weight: bold; es para utilizar en negrita 
+    font-size: tamaño
+   text-aline: center */
+}
+
+.logo {
+    float: left;
+    margin-left: 20px;
+    width: 8%;
+    /* position: fixed; */
+}
+
+main {
+    background-color: rgb(107, 185, 209);
+    grid-area: main;
+    text-align: center;
+}
+
+h2 {
+    height: 50px;
+    font-size: 35px;
+    font-family: cursive;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.intro {
+    border: dotted;
+    border-radius: 20px;
+    font-size: 18px;
+    border-color: rgb(8, 87, 50);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 200%;
+    padding: 1%;
+    background-color: brown;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+
+
+/* ---------- Productos ---------- */
+
+table {
+    display: inline-table;
+    margin-left: 1cm;
+    width: 3cm;
+    border: 3px solid black;
+    border-collapse: collapse;
+    /* para no tener lineas dobles */
+}
+
+section {
+    text-align: center;
+}
+
+th,
+tfoot,
+td {
+    border: 3px solid black;
+    background-color: rgb(150, 182, 224);
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ---------- CONTAINER - INDEX ---------- */
+
+.container {
+    display: grid;
+    grid-gap: 0.2rem;
+    height: 249vh;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr 0.8fr 0.1fr;
+    grid-template-areas: "header header header header"
+        "main main main sidebar"
+        "content1 content2 content3 sidebar"
+        "footer footer footer footer"
+}
+
+
+#sidebar {
+    background-color: rgb(68, 194, 152);
+    grid-area: sidebar;
+}
+
+#content1 {
+    background-color: rgb(147, 192, 243);
+    grid-area: content1;
+}
+
+#content2 {
+    background-color: rgb(128, 221, 190);
+    grid-area: content2;
+}
+
+#content3 {
+    background-color: rgb(147, 192, 243);
+    grid-area: content3;
+}
+
+footer {
+    background-color: aquamarine;
+    grid-area: footer;
+    text-align: center;
+    background-image: url(../img/blue.jpg);
+    font-weight: bolder;
+    border: inset;
+    border-radius: 20px;
+}
+
+/* ----------- MOBILE INDEX -------------- */
+
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+    }
+
+    header {
+        background-image: url(../img/miniwolf.jpg); 
+        text-align: center;
+
+    }
+
+    .navegacion ul {
+        list-style: none;
+        /* display: flex; */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nosotros {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+        float: left;
+        margin-left: 20px;
+        width: 8%;
+    }
+
+    .titulo {
+        margin-bottom: 30px;
+    }
+
+    .compu {
+        max-width: 100%;
+        /* display: none;
+        object-fit: contain;
+        max-width: fit-content; */
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #content1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    #content2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    #content3 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* -------- CONTAINER B / CONTACTO ------------------- */
+
+.containerb {
+    /* display: grid; */
+    grid-gap: 0.2rem;
+    /* max-height: 100vh; */
+    /* height: 100%; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    /*  overflow: hidden; */
+    grid-template-areas: "headerb"
+        "mainb"
+        "footerb"
+}
+
+.headerb {
+    grid-area: headerb;
+}
+
+.mainb {
+    grid-area: mainb;
+    height: 66vh;
+}
+
+.footerb {
+    grid-area: footerb;
+}
+
+
+/* ---------- MOBILE B / CONTACTO ---------- */
+
+@media only screen and (max-width: 480px) {
+    .containerb {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.2fr;
+        grid-template-areas:
+            "headerb"
+            "mainb"
+            "footerb"
+    }
+
+    .headerb {
+        text-align: center;
+        background-image: url(../img/miniwolf.jpg);
+        background-position: center;
+    }
+
+    .mainb {
+        display: grid;
+        /* width: 300px; */
+        background-color: rgb(228, 159, 147);
+        height: fit-content;
+    }
+
+    .contactos {
+        font-size: 30px;
+    }
+
+    textarea {
+        width: 280px;
+    }
+
+    .navegacionb {
+        font-size: small;
+    }
+
+    .logob {
+        display: none;
+    }
+}
+
+
+/* ---------- Container C - Tarjetas graficas ---------- */
+
+.containerc {
+    /* display: grid; */
+    grid-gap: 0.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 2fr 0.1fr;
+    grid-template-areas: "headerc headerc headerc"
+        "mainc mainc mainc"
+        "footerc footerc footerc"
+}
+
+.headerc {
+    grid-area: headerc;
+}
+
+.mainc {
+    background-color: black;
+    grid-area: mainc;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.footerc {
+    grid-area: footerc;
+}
+
+.tarjeta1 {
+    flex-direction: column;
+    grid-area: tarjeta1;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(61, 136, 74);
+}
+
+.tarjeta2 {
+
+    flex-direction: column;
+    grid-area: tarjeta2;
+    margin-top: 30px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(61, 136, 74);
+}
+
+.tarjeta3 {
+
+    flex-direction: column;
+    grid-area: tarjeta3;
+    margin-top: 30px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(61, 136, 74);
+}
+
+/* ---------- Mobile c --------- */
+
+@media only screen and (max-width: 480px) {
+    .containerc {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-areas:
+            "headerc"
+            "mainc"
+            "footerc"
+    }
+
+    .tarjetasg {
+        font-size: 30px;
+    }
+
+    /* .mainc {
+         width: 465px;
+    } */
+
+    .tarjeta1 {
+
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: rgb(61, 136, 74);
+    }
+
+    .tarjeta2 {
+
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        margin-top: 20px;
+        border-radius: 20px;
+        border-color: rgb(61, 136, 74);
+    }
+
+    .tarjeta3 {
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        border-style: solid;
+        border-radius: 20px;
+        border-color: rgb(61, 136, 74);
+    }
+
+}
+
+
+/* ---------- Container d - Multimedia ---------- */
+
+.containerd {
+    display: grid;
+    grid-gap: 0.2rem;
+    height: 150vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.2fr 0.2fr;
+    /* overflow: hidden;  */
+    grid-template-areas: "headerd headerd headerd"
+        "maind maind maind"
+        "footerd footerd footerd"
+}
+
+.headerd {
+    grid-area: headerd;
+}
+
+.maind {
+    grid-area: maind;
+    background-image: url(../img/backblue.jpg);
+}
+
+.footerd {
+    grid-area: footerd;
+}
+
+
+/* ------------ mobile placas d ----------- */
+
+@media only screen and (max-width: 480px) {
+    .containerd {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-areas:
+            "headerd"
+            "maind"
+            "footerd"
+    }
+
+    .maind {
+        max-width: 465px;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/backblue.jpg);
+    }
+
+    .titulod {
+        margin-bottom: 10px;
+        font-size: 23px;
+    }
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .fotos img {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+
+}
+
+/* ---------- Container e - Productos ----------- */
+
+.containers {
+    width: 100%;
+    display: flex;
+    /* background-color: rgb(184, 162, 204); */
+}
+
+.maine {
+    height: 100vh;
+    background-color: rgb(184, 162, 204);
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido .p {
+    line-height: 1.5;
+    color: rgb(110, 92, 92)
+}
+
+.card .contenido h5 {
+    font-weight: bolder;
+    font-size: 18px;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid rgb(161, 161, 241);
+    border-radius: 4px;
+
+}
+
+.card .contenido a:hover {
+    background: rgb(155, 155, 231);
+    color: rgb(255, 255, 255);
+}
+
+/* ----------- Mobile e - Productos ----------- */
+
+
+@media only screen and (max-width: 480px) {
+    .containere {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-areas:
+            "headere"
+            "maine"
+            "footere"
+    }
+
+    .containers {
+        display: flex;
+        flex-direction: column;
+        /* display: inline-block; */
+        /* width: 350px; */
+        margin-right: 80px;
+        /* height: max-content; */
+    }
+
+    .maine {
+        display: grid;
+        height: max-content;
+    }
+
+    .card {
+        display: grid;
+        width: fit-content;
+    }
+}
