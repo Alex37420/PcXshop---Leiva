@@ -94,6 +94,8 @@ main {
     text-align: center;
 }
 
+
+
 h2 {
     height: 50px;
     font-size: 35px;
@@ -158,7 +160,8 @@ h3 {
 footer {
     grid-area: footer;
     text-align: center;
-    background-image: url(../img/blue.jpg);
+    /* background-image: url(../img/blue.jpg); */
+    background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
     font-weight: bolder;
     border: inset;
     border-radius: 20px;
