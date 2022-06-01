@@ -1,8 +1,13 @@
 * {
-    margin: 1px;
-    padding: 1px;
-    box-sizing: border-box;
+    /* margin: 1px; */
+    /* padding: 1px; */
+   /*  box-sizing: border-box; */
 }
+
+/* .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important; 
+} */
 
 @font-face {
     font-family: "Wrestlemania";
@@ -10,7 +15,8 @@
 }
 
 body {
-    background-image: url("../img/Yellowb.jpg");
+    /* background-image: url(../img/Yellowb.jpg); */
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -19,7 +25,7 @@ header {
     border-radius: 20px;
     border-color: rgb(196, 5, 5);
     background-image: url(../img/dogo.jpg);
-    font-size: 120%;
+    /* font-size: 110%; */
     grid-area: header;
 }
 
@@ -33,15 +39,15 @@ header {
 .menu li {
     font-size: 20px;
     display: inline-block;
-    margin-top: 0;
-    margin-bottom: 2px;
+    /* margin-top: 0; */
+    /* margin-bottom: 2px; */
     padding: 5px;
+   
 }
 
 .menu li a {
     display: inline;
-
-    padding: 8px 30px;
+    padding: 7px 30px;
     text-decoration: none;
     font-weight: bold;
     color: rgb(255, 255, 255);
@@ -49,6 +55,7 @@ header {
     border-style: solid;
     border-radius: 20px;
     border-color: black;
+    
 }
 
 h1 {
@@ -62,23 +69,19 @@ h1 {
     margin: 10px;
     background-size: contain;
     background-position: center;
-    /*    font-style: esto es para estilar el tipo de letra
-    font-weight: bold; es para utilizar en negrita 
-    font-size: tamaño
-   text-aline: center */
 }
 
 .logo {
     float: left;
     margin-left: 20px;
     width: 7%;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-name: slide;
 }
 
 @keyframes slide {
     from {
-        margin-left: 30%;
+        margin-left: 25%;
         width: auto;
     }
 
@@ -89,20 +92,26 @@ h1 {
 }
 
 main {
-    background-color: rgb(107, 185, 209);
+    background-color: rgb(134, 168, 212);
     grid-area: main;
     text-align: center;
 }
 
 
+.titulo {
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
 
 h2 {
     height: 50px;
     font-size: 35px;
-    font-family: cursive;
     text-align: center;
     text-decoration: underline;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .intro {
@@ -125,8 +134,8 @@ h3 {
 
 /* ---------- CONTAINER - INDEX ---------- */
 
-.container {
-    display: grid;
+/* .container {
+    display: grid; 
     grid-gap: 0.2rem;
     height: 250vh;
     grid-template-columns: 1fr 1fr 1fr 0.5fr;
@@ -135,7 +144,7 @@ h3 {
         "main main main sidebar"
         "content1 content2 content3 sidebar"
         "footer footer footer footer"
-}
+} */
 
 #sidebar {
     background-color: rgb(68, 194, 152);
@@ -143,7 +152,7 @@ h3 {
 }
 
 #content1 {
-    background-color: rgb(147, 192, 243);
+    background-color: rgb(199, 180, 223);
     grid-area: content1;
 }
 
@@ -161,15 +170,15 @@ footer {
     grid-area: footer;
     text-align: center;
     /* background-image: url(../img/blue.jpg); */
-    background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
+    /* background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8)); */
     font-weight: bolder;
-    border: inset;
-    border-radius: 20px;
+    /* border: inset;
+    border-radius: 20px; */
 }
 
 /* ----------- MOBILE INDEX -------------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1137px) {
     .container {
         /* display: flex; 
          flex-direction: column; */
@@ -219,10 +228,11 @@ footer {
     }
 
     .compu {
-        max-width: 100%;
-        /* display: none;
-        object-fit: contain;
-        max-width: fit-content; */
+        width: 100%;
+        height: auto;
+        /* display: none;  */
+        /* object-fit: contain; */
+        /* max-width: fit-content; */
     }
 
     #sidebar {
@@ -250,13 +260,19 @@ footer {
     }
 }
 
+@media only screen and (max-width: 720px) {
+    #nosotros {
+        display: none;
+    }
+}
+
 /* -------- CONTAINER B / CONTACTO ------------------- */
 
 .containerb {
     /* display: grid; */
     grid-gap: 0.2rem;
     /* max-height: 100vh; */
-    /* height: 100%; */
+    height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 1fr 0.2fr;
     /*  overflow: hidden; */
