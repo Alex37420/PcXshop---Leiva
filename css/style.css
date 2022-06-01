@@ -79,7 +79,7 @@ h1 {
     animation-name: slide;
 }
 
-@keyframes slide {
+/* @keyframes slide {
     from {
         margin-left: 25%;
         width: auto;
@@ -89,7 +89,7 @@ h1 {
         margin: left;
         height: auto;
     }
-}
+} */
 
 main {
     background-color: rgb(134, 168, 212);
