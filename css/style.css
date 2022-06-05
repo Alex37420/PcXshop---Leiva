@@ -1,7 +1,7 @@
 * {
-    /* margin: 1px; */
-    /* padding: 1px; */
-   /*  box-sizing: border-box; */
+    /* margin: 0 !important; */
+    /* padding: 0 !important; */
+     box-sizing: border-box;
 }
 
 /* .container-fluid {
@@ -15,47 +15,17 @@
 }
 
 body {
-    /* background-image: url(../img/Yellowb.jpg); */
     background-color: rgb(0, 0, 0);
 }
 
 
-header {
+.header {
     border: inset;
-    border-radius: 20px;
-    border-color: rgb(196, 5, 5);
-    background-image: url(../img/dogo.jpg);
-    /* font-size: 110%; */
-    grid-area: header;
-}
-
-.navegacion ul {
-    list-style: none;
-    /*  list-style-type: none; para remover los bullets */
-    display: flex;
-    flex-direction: row;
-}
-
-.menu li {
-    font-size: 20px;
-    display: inline-block;
-    /* margin-top: 0; */
-    /* margin-bottom: 2px; */
-    padding: 5px;
-   
-}
-
-.menu li a {
-    display: inline;
-    padding: 7px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(68, 46, 170);
-    border-style: solid;
-    border-radius: 20px;
-    border-color: black;
-    
+    border-color: rgb(7, 0, 0);
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 7px 20px;
+    background-image: linear-gradient(to right, rgb(196, 46, 121), rgb(239, 68, 68), rgb(206, 169, 58));
 }
 
 h1 {
@@ -67,32 +37,85 @@ h1 {
     text-decoration: underline;
     text-shadow: 5px 5px black;
     margin: 10px;
+    margin-left: 20px;
     background-size: contain;
     background-position: center;
+    transition: all .5s linear;
 }
+
+h1:hover{
+    color: rgb(179, 74, 74);
+}
+
+
+.nav-item :hover {
+    background-image: linear-gradient(to bottom, #804ddf, #4c5353);
+}
+
+
+/* ------ Logo hover ------ */
 
 .logo {
     float: left;
     margin-left: 20px;
-    width: 7%;
-    animation-duration: 3s;
-    animation-name: slide;
+    transition: all 0.5s;
 }
 
-/* @keyframes slide {
-    from {
-        margin-left: 25%;
-        width: auto;
-    }
+.logo:hover{
+    transform: scale(1.3);
+}
 
-    to {
-        margin: left;
-        height: auto;
-    }
-} */
+/* ------ Carrousel ------ */
+
+.slider {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+.slider ul {
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: auto;
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+} 
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes cambio{
+    0% {
+        margin-left: -0%;
+        margin-left: -10%;
+      }
+  
+      50% {
+        margin-left: -70%;
+        margin-left: -73%;
+      }
+  
+      50% {
+        margin-left: -70%;
+        margin-left: -73%;
+      }
+  
+      100% {
+        margin-left: -120%;
+      }
+}
+
+/* ------------ */
+
 
 main {
     background-color: rgb(134, 168, 212);
+    background-image: url(../img/mainb.jpg);
     grid-area: main;
     text-align: center;
 }
@@ -104,52 +127,89 @@ main {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 15px;
+    animation-duration: 3s;
+    animation-name: slide;
+    transition: all 0.5s;
+}
+
+
+@keyframes slide {
+    from {
+        margin-left: 35%;
+        width: auto;
+    }
+
+    to {
+        margin: left;
+    }
 }
 
 h2 {
     height: 50px;
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     text-decoration: underline;
-    /* margin-bottom: 15px; */
 }
 
 .intro {
     border: dotted;
     border-radius: 20px;
     font-size: 18px;
-    border-color: rgb(8, 87, 50);
+    border-color: rgb(28, 167, 102);
     text-align: center;
     margin-bottom: 15px;
 }
+
+/* ------ Animacion ofertas ------ */
 
 h3 {
     font-size: 200%;
     padding: 1%;
     background-color: brown;
     text-align: center;
-    text-decoration: underline;
     margin-top: 15px;
+    border: inset;
+    border-color: black;
+    border-radius: 20px; 
 }
+
+
+.waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
 
 /* ---------- CONTAINER - INDEX ---------- */
 
 /* .container {
-    display: grid; 
+    display: grid;
     grid-gap: 0.2rem;
     height: 250vh;
     grid-template-columns: 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 0.1fr 1fr 0.4fr 0.1fr;
     grid-template-areas: "header header header header"
-        "main main main sidebar"
-        "content1 content2 content3 sidebar"
-        "footer footer footer footer"
-} */
+    "main main main sidebar"
+    "content1 content2 content3 sidebar"
+    "footer footer footer footer"
 
-#sidebar {
-    background-color: rgb(68, 194, 152);
-    grid-area: sidebar;
-}
+
+    #sidebar {
+        background-color: rgb(68, 194, 152);
+        grid-area: sidebar;
+    } */
 
 #content1 {
     background-color: rgb(199, 180, 223);
@@ -157,7 +217,7 @@ h3 {
 }
 
 #content2 {
-    background-color: rgb(128, 221, 190);
+    background-color: rgba(128, 221, 190);
     grid-area: content2;
 }
 
@@ -169,25 +229,20 @@ h3 {
 footer {
     grid-area: footer;
     text-align: center;
-    /* background-image: url(../img/blue.jpg); */
-    /* background-image: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8)); */
-    font-weight: bolder;
-    /* border: inset;
-    border-radius: 20px; */
 }
+
 
 /* ----------- MOBILE INDEX -------------- */
 
-@media only screen and (max-width: 1137px) {
+@media only screen and (max-width: 580px) {
     .container {
-        /* display: flex; 
-         flex-direction: column; */
+        display: flex;
+        flex-direction: column;
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
         grid-template-areas:
             "header"
             "main"
-            /* "sidebar" */
             "content1"
             "content2"
             "content3"
@@ -197,13 +252,6 @@ footer {
     header {
         background-image: url(../img/miniwolf.jpg);
         text-align: center;
-    }
-
-    .navegacion ul {
-        list-style: none;
-        /* display: flex; */
-        justify-content: center;
-        flex-wrap: wrap;
     }
 
     h1 {
@@ -230,9 +278,6 @@ footer {
     .compu {
         width: 100%;
         height: auto;
-        /* display: none;  */
-        /* object-fit: contain; */
-        /* max-width: fit-content; */
     }
 
     #sidebar {
@@ -243,14 +288,12 @@ footer {
         display: flex;
         flex-direction: column;
         text-align: center;
-
     }
 
     #content2 {
         display: flex;
         flex-direction: column;
         text-align: center;
-
     }
 
     #content3 {
@@ -260,44 +303,44 @@ footer {
     }
 }
 
-@media only screen and (max-width: 720px) {
-    #nosotros {
+@media only screen and (max-width: 1000px) {
+
+    .slider {
         display: none;
     }
 }
 
 /* -------- CONTAINER B / CONTACTO ------------------- */
 
-.containerb {
-    /* display: grid; */
-    grid-gap: 0.2rem;
-    /* max-height: 100vh; */
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 0.2fr;
-    /*  overflow: hidden; */
-    grid-template-areas: "headerb"
-        "mainb"
-        "footerb"
+.formulario {
+    background-color: black;
+    color: aliceblue;
+    border-style: solid;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-.headerb {
-    grid-area: headerb;
+.textarea {
+    max-width: 95%;
+}
+
+.contactos {
+    padding-top: 10px;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(196, 133, 81);
 }
 
 .mainb {
-    grid-area: mainb;
-    height: 66vh;
-}
-
-.footerb {
-    grid-area: footerb;
+    background-image: url(../img/wal.jpg);
 }
 
 
 /* ---------- MOBILE B / CONTACTO ---------- */
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
     .containerb {
         grid-template-columns: 1fr;
         grid-template-rows: 0.2fr 1fr 0.2fr;
@@ -315,7 +358,6 @@ footer {
 
     .mainb {
         display: grid;
-        /* width: 300px; */
         background-color: rgb(228, 159, 147);
         height: fit-content;
     }
@@ -332,10 +374,7 @@ footer {
         font-size: small;
     }
 
-    .logob {
-        display: none;
-    }
-}
+} */
 
 
 /* ---------- Container C - Tarjetas graficas ---------- */
@@ -355,7 +394,7 @@ footer {
 }
 
 .mainc {
-    background-color: black;
+    background-image: url(../img/mainc.jpg);
     grid-area: mainc;
     color: aliceblue;
     font-size: 20px;
@@ -396,7 +435,7 @@ footer {
 
 /* ---------- Mobile c --------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1200px) {
     .containerc {
         grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr 0.1fr;
@@ -454,7 +493,6 @@ footer {
     height: 150vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1.2fr 0.2fr;
-    /* overflow: hidden;  */
     grid-template-areas: "headerd headerd headerd"
         "maind maind maind"
         "footerd footerd footerd"
@@ -467,16 +505,16 @@ footer {
 .maind {
     grid-area: maind;
     background-image: url(../img/backblue.jpg);
+    width: 100%;
 }
 
 .footerd {
     grid-area: footerd;
 }
 
-
 /* ------------ mobile placas d ----------- */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 620px) {
     .containerd {
         grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr 0.1fr;
@@ -487,7 +525,6 @@ footer {
     }
 
     .maind {
-        max-width: 465px;
         display: flex;
         flex-direction: column;
         background-image: url(../img/backblue.jpg);
@@ -518,21 +555,17 @@ footer {
         flex-direction: column;
         width: 100%;
     }
-
-
-
 }
 
 /* ---------- Container e - Productos ----------- */
 
 .containers {
     width: 100%;
-    display: flex;
-    /* background-color: rgb(184, 162, 204); */
+    display: inline-flex;
 }
 
 .maine {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: rgb(184, 162, 204);
 }
 
@@ -553,8 +586,8 @@ footer {
 }
 
 .card img {
-    width: 100%;
-    height: 210px;
+    /* width: 100%; */
+    max-height: 150px;
 }
 
 .card .contenido {
@@ -591,8 +624,7 @@ footer {
 
 /* ----------- Mobile e - Productos ----------- */
 
-
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1080px) {
     .containere {
         grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr 0.1fr;
@@ -605,10 +637,7 @@ footer {
     .containers {
         display: flex;
         flex-direction: column;
-        /* display: inline-block; */
-        /* width: 350px; */
         margin-right: 80px;
-        /* height: max-content; */
     }
 
     .maine {
@@ -619,5 +648,10 @@ footer {
     .card {
         display: grid;
         width: fit-content;
+    }
+
+    .card img {
+        height: 150px;
+        max-width: 100%;
     }
 }

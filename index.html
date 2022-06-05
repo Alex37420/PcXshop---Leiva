@@ -2,166 +2,200 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pc-X-Shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pc-X-Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-        <header>
-            <img class="logo" src="./img/logoz.png" alt="">
-            <h1>Pc-X-Shop</h1>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li><a class href="#">Inicio</a></li>
-                    <li><a href="./pages/productos.html">Productos</a></li>
-                    <li><a href="./pages/tarjetas-graficas.html">Placas</a></li>
-                    <li><a href="./pages/multimedia.html">Multimedia</a></li>
-                    <li id="nosotros"><a href="#acerca">Acerca de nosotros</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-            <nav class="navbar navbar-light bg-dark rounded-pill">
-                <div class="container-fluid">
-                  <form class="d-flex">
-                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-danger " type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
-        </header>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a href="./index.html"><img class="logo logob" src="./img/logoz.png" alt=""></a>
+          <h1 class="h1b" id="link">Pc-X-Shop</h1></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./pages/productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./pages/tarjetas-graficas.html">Tarjetas
+                  gráficas</a>
+              </li>
 
-        <div class="row">
-        <main class="col-md-12">
-            <h2 class="titulo">Tu tienda electrónica de confianza!</h2>
-            <p class="intro">Aquí encontrarás los mejores productos de última gama al mejor precio del
-                país.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusamus ex ut consequatur? Voluptatibus
-                fuga nobis sequi veniam dolorem recusandae ipsa nesciunt nisi a quo exercitationem itaque facilis
-                deserunt
-                voluptas, alias assumenda ab, in id? Obcaecati deserunt ea quas iste culpa, voluptates magnam
-                architecto?
-                Fugiat hic libero iure, sunt perferendis rerum excepturi quia tempora nostrum porro accusantium a aut ad
-                praesentium qui sed ut voluptates et quasi. Numquam non nemo totam temporibus laboriosam, eveniet
-                possimus
-                facere consequuntur voluptates quidem, sit voluptas ipsa labore cupiditate magnam nobis ab officia
-                beatae
-                ea? Quisquam id doloremque eos illo aspernatur at eaque reprehenderit debitis?</p>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./pages/multimedia.html">Multimedia</a>
+              </li>
 
-            <img class="compu img-fluid" src="./img/computadoraindex - copia - copia.jpg" alt="">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="" aria-label="Search" />
+              <button class="btn btn-outline-primary" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-            <h4 class="about" id="acerca">⋆★⋆ ════ ⋘ Acerca de nosotros ⋙════ ⋆★⋆</h4>
-            <p> <em>Somos una tienda creada allá en el 2001 con la idea de traer productos a un precio razonable para que
-                vos,
-                nuestro
-                cliente! puedas tener acceso a toda clase de componentes que sabemos son difiles de adquirir en el
-                mercado
-                latinoamericano.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatum itaque tempora dolor, quos
-                nam
-                numquam
-                laboriosam ipsa esse minima deserunt tempore. Blanditiis soluta eum a architecto itaque corrupti animi,
-                voluptates
-                eius voluptatibus cum ea vero, reprehenderit non hic laborum alias nostrum perferendis nihil magni
-                dolorum
-                natus.
-                Facere iusto in quod corporis voluptatibus eligendi dolor totam, quos perspiciatis eos, ipsam eum culpa
-                consequatur
-                iste exercitationem voluptatum voluptatem accusantium libero enim. Eius reiciendis atque eum unde vero
-                aliquam
-                voluptates, iste molestiae eveniet necessitatibus voluptas voluptatibus ratione obcaecati minus? Ipsum
-                voluptas
-                assumenda adipisci quasi quibusdam dignissimos aperiam at illo error, quaerat nostrum, fuga saepe cumque
-                culpa.</em></p>
+    <div class="row">
+      <main class="col-md-12">
+        <h2 class="titulo text-warning">Tu tienda electrónica de confianza!</h2>
+        <p class="intro"> <strong> Aquí encontrarás los mejores productos de última gama al mejor precio del
+          país.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusamus ex ut consequatur? Voluptatibus
+          fuga nobis sequi veniam dolorem recusandae ipsa nesciunt nisi a quo exercitationem itaque facilis
+          deserunt
+          voluptas, alias assumenda ab, in id? Obcaecati deserunt ea quas iste culpa, voluptates magnam
+          architecto?
+          Fugiat hic libero iure, sunt perferendis rerum excepturi quia tempora nostrum porro accusantium a aut ad
+          praesentium qui sed ut voluptates et quasi. Numquam non nemo totam temporibus laboriosam, eveniet
+          possimus
+          facere consequuntur voluptates quidem, sit voluptas ipsa labore cupiditate magnam nobis ab officia
+          beatae
+          ea? Quisquam id doloremque eos illo aspernatur at eaque reprehenderit debitis?</strong></p>
 
-            <h3>Nuestras Ofertas de Otoño</h3>
-        
+        <img class="compu img-fluid" src="./img/computadoraindex.jpg" alt="">
+
+        <h4 class="about text-warning" id="acerca">⋆★⋆ ════ ⋘ Acerca de nosotros ⋙════ ⋆★⋆</h4>
+        <p class="text-light"> <em>Somos una tienda creada allá en el 2001 con la idea de traer productos a un precio razonable para que
+            vos,
+            nuestro
+            cliente! puedas tener acceso a toda clase de componentes que sabemos son difiles de adquirir en el
+            mercado
+            latinoamericano.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore voluptatum itaque tempora dolor, quos
+            nam
+            numquam
+            laboriosam ipsa esse minima deserunt tempore. Blanditiis soluta eum a architecto itaque corrupti animi,
+            voluptates
+            eius voluptatibus cum ea vero, reprehenderit non hic laborum alias nostrum perferendis nihil magni
+            dolorum
+            natus.
+           .</em></p>
+
+        <h3 class="waviy"><span style="--i:1">O</span>
+          <span style="--i:2">F</span>
+          <span style="--i:3">E</span>
+          <span style="--i:4">R</span>
+          <span style="--i:5">T</span>
+          <span style="--i:6">A</span>
+          <span style="--i:7">$</span>
+          <span style="--i:8">.</span></h3>
 
         <!-- <div class="col" id="sidebar"><img class="add" src="./img/add.jpg" alt=""> </div>  -->
     </div>
 
     <div class="row text-center">
-        <div class="col border border-dark" id="content1"><img class="procesador1" src="./img/procesador1.png" alt="procesadoramd">
-            <p>AMD RYZEN 5 5600X:
-                Este producto ideal para jugadores y creadores de contenido que requieran un instrumento de gran
-                ejecución.
-                Memoria caché de 32 MB, rápida y volátil.
-                Soporta memoria RAM DDR4.
-                Su potencia es de 65 W.
-                Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.
-                Procesador innovador desarrollado bajo altos estándares de calidad. Clave en el rendimiento de tu
-                computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora
-                las
-                tareas en simultáneo son posibles.
-                AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios:
-                juegos
-                en línea, edición a gran escala, contenido en múltiples plataformas y más.
-                Producto en empaque original.</p>
-        </div>
+      <div class="col-md-4 border border-dark" id="content1"><img class="procesador1" src="./img/procesador1.png"
+          alt="procesadoramd">
+        <p><strong>AMD RYZEN 5 5600X:
+          Este producto ideal para jugadores y creadores de contenido que requieran un instrumento de gran
+          ejecución.
+          Memoria caché de 32 MB, rápida y volátil.
+          Soporta memoria RAM DDR4.
+          Su potencia es de 65 W.
+          Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.
+          Procesador innovador desarrollado bajo altos estándares de calidad. Clave en el rendimiento de tu
+          computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora
+          las
+          tareas en simultáneo son posibles.
+          AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios:
+          juegos
+          en línea, edición a gran escala, contenido en múltiples plataformas y más.
+          Producto en empaque original.</strong></p>
+      </div>
 
-        <div class="col border border-dark" id="content2"><img class="auricular" src="./img/auricular1.jpg" alt="auricularsoundcore">
-            <p class="auri"><strong>SOUNDCORE B420: En la calle, en el colectivo o en la oficina, tené siempre a mano tus
-                auriculares Soundcore y
-                ¡escapate de la
-                rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos
-                cuando
-                quieras y donde quieras.
+      <div class="col-md-4 border border-dark" id="content2"><img class="auricular" src="./img/auricular1.jpg"
+          alt="auricularsoundcore">
+        <p class="auri"><strong> SOUNDCORE B420: En la calle, en el colectivo o en la oficina, tené siempre a mano tus
+          auriculares Soundcore y
+          ¡escapate de la
+          rutina por un rato! Vas a poder disfrutar de la música que más te gusta y de tus podcasts favoritos
+          cuando
+          quieras y donde quieras.
 
-                El formato perfecto para vos
-                El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo,
-                su
-                sonido envolvente del más alto nivel se convierte en el protagonista de la escena.
+          El formato perfecto para vos
+          El diseño over-ear brinda una comodidad insuperable gracias a sus suaves almohadillas. Al mismo tiempo,
+          su
+          sonido envolvente del más alto nivel se convierte en el protagonista de la escena.
 
-                Bluetooth de última generación
-                Con la versión de bluetooth 5.0 tenés un montón de beneficios para aprovechar. En comparación a su
-                antecesor
-                BT 4.2, podrás obtener velocidades de transmisión de hasta 2.2 Mbps de datos y alcanzar una distancia
-                máxima
-                de 200 metros de conexión. Pero una de las novedades más sobresalientes es que con su modo dual tendrás
-                la
-                posibilidad de reproducir audio al mismo tiempo en dos dispositivos diferentes.</strong></p>
-        </div>
+          Bluetooth de última generación
+          Con la versión de bluetooth 5.0 tenés un montón de beneficios para aprovechar. En comparación a su
+          antecesor
+          BT 4.2, podrás obtener velocidades de transmisión de hasta 2.2 Mbps de datos y alcanzar una distancia
+          máxima
+          de 200 metros de conexión. Pero una de las novedades más sobresalientes es que con su modo dual tendrás
+          la
+          posibilidad de reproducir audio al mismo tiempo en dos dispositivos diferentes.</strong></p>
+      </div>
 
-        <div class="col border border-dark" id="content3"><img class="gabinete img-fluid" src="./img/gabinete1.jpg" alt="gabinetepc">
-            <p class="gabi">Gabinete Gamer DarkFlash Pollux con Panel lateral de Acrílico, Frente Mallado.
-                Con dos Filtros de Polvo: Superior (magnetico) e Inferior (para la fuente)
+      <div class="col-md-4 border border-dark" id="content3"><img class="gabinete img-fluid" src="./img/gabinete1.jpg">
+        <p class="gabi"><strong>Gabinete Gamer DarkFlash Pollux con Panel lateral de Acrílico, Frente Mallado.
+          Con dos Filtros de Polvo: Superior (magnetico) e Inferior (para la fuente)
 
-                Marca: darkFlash
-                Modelo: Pollux con lateral de acrilico y frente de malla metálica
-                Apto para Mother AXT, M-ATX e ITX DISEÑO DISCRETO e HIPERVENTILADO: (hasta 8 ventiladores)
-                Su diseño simple, la pintura de metal de color negro, su frente mallado y sus diversas posibilidades de
-                refrigeración, ya que permite colocar 2 ventiladores adicionales en la tapa de la fuente de
-                alimentación, contribuye a mejorar el efecto RGB y al mismo tiempo brinda una mejor solución térmica.
-                Todo ello lo hacen el gabinete ideal tanto para los gamers entusiastas, como así también para los
-                profesionales mas exigentes.</p>
-        </div>
-    </main>
+          Marca: darkFlash
+          Modelo: Pollux con lateral de acrilico y frente de malla metálica
+          Apto para Mother AXT, M-ATX e ITX DISEÑO DISCRETO e HIPERVENTILADO: (hasta 8 ventiladores)
+          Su diseño simple, la pintura de metal de color negro, su frente mallado y sus diversas posibilidades de
+          refrigeración, ya que permite colocar 2 ventiladores adicionales en la tapa de la fuente de
+          alimentación, contribuye a mejorar el efecto RGB y al mismo tiempo brinda una mejor solución térmica.
+          Todo ello lo hacen el gabinete ideal tanto para los gamers entusiastas, como así también para los
+          profesionales mas exigentes.</strong></p>
+      </div>
 
+      <div class="slider">
+        <ul>
+          <li><img src="./img/slide1.jpg" alt="" /></li>
+          <li><img src="./img/slide2.jpg" alt="" /></li>
+          <li>
+            <img src="./img/slide3.webp" alt="" />
+          </li>
+          <li>
+            <img src="./img/slide4.jpg" alt="" />
+          </li>
+          <li><img src="./img/slide5.jpg" alt="" /></li>
+          <li>
+            <img src="./img/slide6.jpg" alt="" />
+          </li>
+          <li><img src="./img/slide7.jpg" alt="" /></li>
+        </ul>
+      </div>
+
+      </main>
     </div>
 
+
     <!-- Footer con BOOTSTRAP -->
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: #1c2331"
-            >
+    
+    <footer class="text-center text-lg-start text-white" style="background-color: #151c29">
       <!-- Section: Redes sociales -->
-      <section
-               class="d-flex justify-content-between p-4"
-               style="background-color: #6351ce"
-               >
+      <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
         <!-- Izquierda -->
         <div class="me-5">
           <span>Te esperamos en nuestras redes sociales:</span>
         </div>
-  
+
         <!-- A la derecha -->
         <div>
           <a href="https://www.facebook.com" class="me-4">
@@ -170,7 +204,7 @@
           <a href="https://twitter.com" class="me-4">
             <img src="./img/twitter.png" alt="">
           </a>
-          
+
           <a href="https://www.instagram.com" class="me-4">
             <img src="./img/Insta.png" alt="">
           </a>
@@ -178,9 +212,9 @@
             <img src="./img/Youtube.png" alt="">
           </a>
         </div>
-        
+
       </section>
-  
+
       <section class="">
         <div class="container text-center text-md-start mt-5">
           <!-- Grid filas -->
@@ -189,22 +223,18 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Contenido -->
               <h6 class="text-uppercase fw-bold">Pc-X-Shop</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c47934; height: 3px" />
               <p>
                 Venta de componentes y armado de PC's - Gamers - Oficina - Notebooks - Tablets - Accesorios.
               </p>
             </div>
-  
+
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold">Productos</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c47934; height: 3px" />
               <p>
                 <a href="./pages/productos.html" class="text-white">Auriculares</a>
               </p>
@@ -221,79 +251,54 @@
                 <a href="./pages/productos.html" class="text-white">Memorias Ram</a>
               </p>
             </div>
-            
-  
+
+
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Más links -->
               <h6 class="text-uppercase fw-bold">Información util</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c47934; height: 3px" />
               <p>
                 <a href="./pages/contacto.html" class="text-white">Registrarse</a>
               </p>
               <p>
-                <a href="https://www.correoargentino.com.ar/MiCorreo/public/?utm_source=correoargentino.com.ar&utm_medium=referral" class="text-white">Envios</a>
+                <a href="https://www.correoargentino.com.ar/MiCorreo/public/?utm_source=correoargentino.com.ar&utm_medium=referral"
+                  class="text-white">Envios</a>
               </p>
               <p>
-                <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" class="text-white">Ayuda al consumidor</a>
+                <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" class="text-white">Ayuda al
+                  consumidor</a>
               </p>
             </div>
-  
+
             <!-- Columnas en Grid -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <!-- Sarasa -->
               <h6 class="text-uppercase fw-bold">Contacto</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #c47934; height: 3px" />
               <p><i class="fas mr-3"></i> Argentina - Mendoza, Ciudad</p>
               <p><i class="fas mr-3"></i> TiendaX@yahoo.com.ar</p>
               <p><i class="fas mr-3"></i> + 01 234 567 8910</p>
             </div>
-            
+
           </div>
-         
+
         </div>
       </section>
-    
+
       <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-           Copyright © 2022:
-        <a class="text-white" href="#"
-           >PcXshop</a
-          >
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Copyright © 2022:
+        <a class="text-white" href="#">PcXshop</a>
       </div>
     </footer>
-    
-  
+
+
   </div>
 
-
-<!--         <footer>
-            <p>__________ Nuestras redes __________</p>
-            <div>
-                <a href="https://www.facebook.com"><img src="./img/Facebook.png" alt=""></a>
-                <a href="https://twitter.com"><img src="./img/Twitter.png" alt=""></a>
-                <a href="https://www.instagram.com"> <img src="./img/Insta.png" alt=""></a></div>
-            Copyright © 2022 | Todos los derechos Reservados - PcXshop. <br>
-            Venta de componentes y armado de PC's - Gamers - Oficina - Notebooks - Tablets - Accesorios.
-            Defensa al consumidor, para reclamos ingresa aquí:
-            <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="blank">Términos y
-                condiciones</a>
-        </footer>
-
-    </div> -->
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
 
 </body>
 
