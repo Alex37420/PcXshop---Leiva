@@ -9,6 +9,9 @@
     padding-right: 0 !important; 
 } */
 
+@import 'variables';
+@import 'tipografias';
+
 @font-face {
     font-family: "Wrestlemania";
     src: url(../fonts/WRESTLEMANIA.ttf);
@@ -41,15 +44,10 @@ h1 {
     background-size: contain;
     background-position: center;
     transition: all .5s linear;
-}
 
-h1:hover{
-    color: rgb(179, 74, 74);
-}
-
-
-.nav-item :hover {
-    background-image: linear-gradient(to bottom, #804ddf, #4c5353);
+    &:hover {
+        color: brown;
+    }
 }
 
 
@@ -59,10 +57,10 @@ h1:hover{
     float: left;
     margin-left: 20px;
     transition: all 0.5s;
-}
 
-.logo:hover{
-    transform: scale(1.3);
+    &:hover{
+        transform: scale(1.3);
+    }
 }
 
 /* ------ Carrousel ------ */
@@ -71,22 +69,18 @@ h1:hover{
     width: 100%;
     height: 300px;
     overflow: hidden;
-  }
 
-.slider ul {
-    display: flex;
-    animation: cambio 20s infinite alternate linear;
-    width: auto;
-}
+    ul {
+        display: flex;
+        animation: cambio 20s infinite alternate linear;
+        width: auto;
+    }
 
-.slider li {
-    list-style: none;
-    width: 100%;
-} 
+    li {
+        list-style: none;
+        width: 100%;
+    } 
 
-  .slide img {
-    width: 100%;
-    height: 100%;
   }
 
   @keyframes cambio{
@@ -114,7 +108,6 @@ h1:hover{
 
 
 main {
-    background-color: rgb(134, 168, 212);
     background-image: url(../img/mainb.jpg);
     grid-area: main;
     text-align: center;
@@ -129,7 +122,8 @@ main {
     margin-bottom: 15px;
     animation-duration: 3s;
     animation-name: slide;
-    transition: all 0.5s;
+    transition: all 0.5s; 
+    color: $color-principal;
 }
 
 
@@ -149,6 +143,7 @@ h2 {
     font-size: 30px;
     text-align: center;
     text-decoration: underline;
+    color: $color-principal;
 }
 
 .intro {
@@ -158,6 +153,17 @@ h2 {
     border-color: rgb(28, 167, 102);
     text-align: center;
     margin-bottom: 15px;
+    color:$color-claro;
+}
+
+.nosotros {
+    color: $color-flor;
+    font-family: $text-title;
+    font-size: 18px;
+}
+
+.about {
+    color: $color-principal;
 }
 
 /* ------ Animacion ofertas ------ */
@@ -176,16 +182,18 @@ h3 {
 
 .waviy {
     position: relative;
+
+    span {
+        position: relative;
+        display: inline-block;
+        font-size: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        animation: flip 2s infinite;
+        animation-delay: calc(.2s * var(--i))
+      }
   }
-  .waviy span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color: #fff;
-    text-transform: uppercase;
-    animation: flip 2s infinite;
-    animation-delay: calc(.2s * var(--i))
-  }
+  
   @keyframes flip {
     0%,80% {
       transform: rotateY(360deg) 
@@ -217,8 +225,8 @@ h3 {
 }
 
 #content2 {
-    background-color: rgba(128, 221, 190);
     grid-area: content2;
+    background-color: rgb(143, 211, 190);
 }
 
 #content3 {
@@ -337,46 +345,6 @@ footer {
     background-image: url(../img/wal.jpg);
 }
 
-
-/* ---------- MOBILE B / CONTACTO ---------- */
-
-/* @media only screen and (max-width: 480px) {
-    .containerb {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 1fr 0.2fr;
-        grid-template-areas:
-            "headerb"
-            "mainb"
-            "footerb"
-    }
-
-    .headerb {
-        text-align: center;
-        background-image: url(../img/miniwolf.jpg);
-        background-position: center;
-    }
-
-    .mainb {
-        display: grid;
-        background-color: rgb(228, 159, 147);
-        height: fit-content;
-    }
-
-    .contactos {
-        font-size: 30px;
-    }
-
-    textarea {
-        width: 280px;
-    }
-
-    .navegacionb {
-        font-size: small;
-    }
-
-} */
-
-
 /* ---------- Container C - Tarjetas graficas ---------- */
 
 .containerc {
@@ -481,36 +449,27 @@ footer {
         border-radius: 20px;
         border-color: rgb(61, 136, 74);
     }
-
 }
-
 
 /* ---------- Container d - Multimedia ---------- */
 
-.containerd {
-    /* display: grid; */
-    grid-gap: 0.2rem;
-    height: 150vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.2fr 0.2fr;
-    grid-template-areas: "headerd headerd headerd"
-        "maind maind maind"
-        "footerd footerd footerd"
+.article__images {
+    align-items: center;
+    margin: 20px;
+
+    img {
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5%;
+    }
+
+    .img-thumbnail {
+        background-color: #6462cc;
+    }
 }
 
-.headerd {
-    grid-area: headerd;
-}
-
-.maind {
-    grid-area: maind;
-    background-image: url(../img/backblue.jpg);
-    width: 100%;
-}
-
-.footerd {
-    grid-area: footerd;
-}
 
 /* ------------ mobile placas d ----------- */
 
@@ -527,12 +486,12 @@ footer {
     .maind {
         display: flex;
         flex-direction: column;
-        background-image: url(../img/backblue.jpg);
     }
 
     .titulod {
         margin-bottom: 10px;
-        font-size: 23px;
+        font-size: 28px;
+        color: $color-flor;
     }
 
     .iframe-container {
@@ -540,14 +499,14 @@ footer {
         width: 100%;
         padding-bottom: 56.25%;
         height: 0;
-    }
 
-    .iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .fotos img {
@@ -565,7 +524,6 @@ footer {
 }
 
 .maine {
-    /* height: 100vh; */
     background-color: rgb(184, 162, 204);
 }
 
@@ -578,48 +536,50 @@ footer {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
-}
 
-.card:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
-}
+    &:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        transform: translateY(-3%);
+    }
 
-.card img {
-    /* width: 100%; */
-    max-height: 150px;
-}
+    img {
+        /* width: 100%; */
+        max-height: 150px;
+    }
 
-.card .contenido {
-    padding: 15px;
-    text-align: center;
-}
+    .contenido {
+        padding: 15px;
+        text-align: center;
 
-.card .contenido .p {
-    line-height: 1.5;
-    color: rgb(110, 92, 92)
-}
+        .p {
+            line-height: 1.5;
+            color: rgb(110, 92, 92)
+        }
 
-.card .contenido h5 {
-    font-weight: bolder;
-    font-size: 18px;
-    text-decoration: underline;
-    margin-bottom: 15px;
-}
+        h5 {
+            font-weight: bolder;
+            font-size: 18px;
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
 
-.card .contenido a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    margin-top: 20px;
-    border: 1px solid rgb(161, 161, 241);
-    border-radius: 4px;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 20px;
+            border: 1px solid rgb(161, 161, 241);
+            border-radius: 4px;
 
-}
+            &:hover {
+                background: rgb(155, 155, 231);
+                color: rgb(255, 255, 255);
+            }
+        
+        }
 
-.card .contenido a:hover {
-    background: rgb(155, 155, 231);
-    color: rgb(255, 255, 255);
+    }
+
 }
 
 /* ----------- Mobile e - Productos ----------- */
@@ -648,10 +608,11 @@ footer {
     .card {
         display: grid;
         width: fit-content;
+        img {
+            height: 150px;
+            max-width: 100%;
+        }
     }
 
-    .card img {
-        height: 150px;
-        max-width: 100%;
-    }
+    
 }
