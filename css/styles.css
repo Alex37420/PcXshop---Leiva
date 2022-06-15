@@ -7,12 +7,27 @@
     padding-left: 0 !important;
     padding-right: 0 !important; 
 } */
+/* mapa de colores */
+/* Vista celular */
+/* sombreado */
+.mainz {
+  text-align: start; }
+  .mainz a:hover {
+    transition: all 0.5s;
+    transform: scale(1.05); }
+
+/* mapa de colores */
+/* Vista celular */
+/* sombreado */
+.mainz {
+  text-align: start; }
+  .mainz a:hover {
+    transition: all 0.5s;
+    transform: scale(1.05); }
+
 @font-face {
   font-family: "Wrestlemania";
   src: url(../fonts/WRESTLEMANIA.ttf); }
-
-body {
-  background-color: black; }
 
 .header {
   border: inset;
@@ -51,7 +66,7 @@ h1 {
   width: 100%;
   height: 300px;
   overflow: hidden; }
-  .slider ul {
+  .slider ul, .slider .mainz {
     display: flex;
     animation: cambio 20s infinite alternate linear;
     width: auto; }
@@ -430,3 +445,78 @@ footer {
     .card img {
       height: 150px;
       max-width: 100%; } }
+
+/* ------ Sorteo ------ */
+.mainz {
+  height: 100vh;
+  color: #4c00ff;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "card" "primary";
+  align-items: start;
+  background-image: url("../img/jinx.jpg");
+  background-position: center;
+  background-size: cover; }
+  @media (min-width: 720px) {
+    .mainz {
+      grid-template-columns: 70% auto;
+      grid-template-rows: 100%;
+      grid-template-areas: "primary card"; } }
+  .mainz section.card {
+    grid-area: card;
+    background-color: white;
+    margin: 1em auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    width: 80%; }
+    @media (min-width: 720px) {
+      .mainz section.card {
+        align-self: flex-end;
+        margin: 1em; } }
+    .mainz section.card ul, .mainz section.card .mainz {
+      list-style-type: none;
+      /* text-align: start; */ }
+      .mainz section.card ul li, .mainz section.card .mainz li {
+        margin-bottom: 10px; }
+        .mainz section.card ul li .bullet, .mainz section.card .mainz li .bullet {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #e855e8;
+          margin-right: 10px; }
+        .mainz section.card ul li strong, .mainz section.card .mainz li strong {
+          display: inline-block;
+          margin-left: 40px; }
+  .mainz section.primary {
+    grid-area: primary;
+    padding: 25px; }
+    @media (min-width: 720px) {
+      .mainz section.primary {
+        text-align: left;
+        margin: 4em 0 0 4em; } }
+    .mainz section.primary h1 {
+      font-size: 3em;
+      font-color: #4c00ff;
+      font-margin-top: 10px; }
+      @media (min-width: 720px) {
+        .mainz section.primary h1 {
+          font-size: 6em; } }
+    .mainz section.primary p {
+      font-size: 1.4em;
+      color: violet; }
+    .mainz section.primary a {
+      background-color: #e855e8;
+      color: #901490;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      padding: 25px;
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center; }
+      @media (min-width: 720px) {
+        .mainz section.primary a {
+          display: inline-block; } }

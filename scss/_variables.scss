@@ -2,3 +2,30 @@ $color-principal:yellow;
 $color-texto: darkblue;
 $color-flor: aqua;
 $color-claro: white;
+
+/* mapa de colores */
+$colors:(primary:violet,primary-light:lighten(violet,40%),primary-dark:darken(violet,10%),text-light:(violet,60%), text-dark:darken(violet,40%),color-hover:rgb(76, 0, 255));
+
+/* Vista celular */
+$mobile:720px;
+
+//medidas varias
+$padding:25px;
+$radius:15px;
+
+/* sombreado */
+$shadow:0 10px 30px rgba(0, 0, 0, .4);    
+
+.mainz {
+      @extend ul;
+      text-align: start;  
+
+      a {
+        &:hover{
+            @extend a;
+            transition: all 0.5s;
+            transform: scale(1.05);
+
+        }
+      }
+}

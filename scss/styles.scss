@@ -10,17 +10,13 @@
 } */
 
 @import 'variables';
+@import 'mixins';
 @import 'tipografias';
 
 @font-face {
     font-family: "Wrestlemania";
     src: url(../fonts/WRESTLEMANIA.ttf);
 }
-
-body {
-    background-color: rgb(0, 0, 0);
-}
-
 
 .header {
     border: inset;
@@ -613,6 +609,126 @@ footer {
             max-width: 100%;
         }
     }
+}
 
-    
+/* ------ Sorteo ------ */
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+.mainz {
+    height: 100vh;
+    color: map-get($colors,color-hover);
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "card"
+        "primary";
+    align-items: start;
+
+    @include mobile {
+        grid-template-columns: 70% auto;
+        grid-template-rows: 100%;
+        grid-template-areas: "primary card";
+    }
+
+    background: {
+        image: url('../img/jinx.jpg');
+        position: center;
+        size: cover;
+        
+        
+    }
+
+    section.card {
+        grid-area: card;
+        background-color: color(primary-light);
+        margin: 1em auto;
+        padding: $padding;
+        border-radius: $radius;
+        box-shadow: $shadow;
+        width: 80%;
+        
+        @include mobile {
+            align-self: flex-end;
+            margin: 1em;
+        }
+
+        ul {
+            list-style-type: none;
+            /* text-align: start; */
+            
+
+            li {
+                margin-bottom: 10px;
+                
+                .bullet {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: color(primary-dark);
+                    margin-right: 10px;
+                
+                }
+
+                strong {
+                    display: inline-block;
+                    margin-left: max(40px);
+                }
+            }
+
+        }
+    }
+
+    section.primary {
+        grid-area: primary;
+        padding: $padding;
+
+        @include mobile {
+            text-align: left;
+            margin: 4em 0 0 4em;
+            color: map-get($colors,text);
+
+        }
+
+        h1 {
+            font: {
+                size: 3em;
+                color: map-get($colors,color-hover);
+                margin-top: 10px;
+            }
+
+            @include mobile {
+                font-size: 6em;
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            color: map-get($colors,primary);
+        }
+
+        a{
+            background-color: color(primary-dark);
+            color: map-get($colors,text-dark);
+            border-radius: $radius;
+            box-shadow: $shadow;
+            padding: $padding;
+            display: block;
+            font-weight: bold;
+            
+
+            text: {
+                decoration:none;
+                transform:uppercase;
+                align:center;
+            }
+
+            @include mobile{
+                display:inline-block;
+                
+            }
+        }
+    }
 }
