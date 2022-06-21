@@ -3,10 +3,6 @@
   /* padding: 0 !important; */
   box-sizing: border-box; }
 
-/* .container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important; 
-} */
 /* mapa de colores */
 /* Vista celular */
 /* sombreado */
@@ -60,6 +56,9 @@ h1 {
   transition: all 0.5s; }
   .logo:hover {
     transform: scale(1.3); }
+
+.desplegable {
+  transition: all 1s; }
 
 /* ------ Carrousel ------ */
 .slider {
@@ -115,25 +114,20 @@ h2 {
   height: 50px;
   font-size: 30px;
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: underline;
+  text-shadow: 2px 2px 2px #CE5937;
   color: yellow; }
 
 .intro {
   border: dotted;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 20px;
   border-color: #1ca766;
   text-align: center;
   margin-bottom: 15px;
-  color: white; }
-
-.nosotros {
-  color: aqua;
-  font-family: "cursive";
-  font-size: 18px; }
-
-.about {
-  color: yellow; }
+  color: white;
+  text-shadow: 4px 1px 7px rgba(52, 52, 52, 0.78); }
 
 /* ------ Animacion ofertas ------ */
 h3 {
@@ -162,46 +156,17 @@ h3 {
     transform: rotateY(360deg); } }
 
 /* ---------- CONTAINER - INDEX ---------- */
-/* .container {
-    display: grid;
-    grid-gap: 0.2rem;
-    height: 250vh;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 0.1fr 1fr 0.4fr 0.1fr;
-    grid-template-areas: "header header header header"
-    "main main main sidebar"
-    "content1 content2 content3 sidebar"
-    "footer footer footer footer"
-
-
-    #sidebar {
-        background-color: rgb(68, 194, 152);
-        grid-area: sidebar;
-    } */
 #content1 {
-  background-color: #c7b4df;
-  grid-area: content1; }
+  background-color: #c7b4df; }
 
 #content2 {
-  grid-area: content2;
   background-color: #8fd3be; }
 
 #content3 {
-  background-color: #93c0f3;
-  grid-area: content3; }
-
-footer {
-  grid-area: footer;
-  text-align: center; }
+  background-color: #93c0f3; }
 
 /* ----------- MOBILE INDEX -------------- */
 @media only screen and (max-width: 580px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas: "header" "main" "content1" "content2" "content3" "footer"; }
   header {
     background-image: url(../img/miniwolf.jpg);
     text-align: center; }
@@ -242,9 +207,10 @@ footer {
 
 /* -------- CONTAINER B / CONTACTO ------------------- */
 .formulario {
-  background-color: black;
+  background-color: rgba(22, 3, 3, 0.562);
   color: aliceblue;
   border-style: solid;
+  border-radius: 20px;
   margin-right: 50px;
   margin-left: 50px;
   padding-bottom: 20px;
@@ -263,36 +229,20 @@ footer {
   background-image: url(../img/wal.jpg); }
 
 /* ---------- Container C - Tarjetas graficas ---------- */
-.containerc {
-  /* display: grid; */
-  grid-gap: 0.2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 2fr 0.1fr;
-  grid-template-areas: "headerc headerc headerc" "mainc mainc mainc" "footerc footerc footerc"; }
-
-.headerc {
-  grid-area: headerc; }
-
 .mainc {
   background-image: url(../img/mainc.jpg);
-  grid-area: mainc;
   color: aliceblue;
   font-size: 20px;
   padding: 10px; }
 
-.footerc {
-  grid-area: footerc; }
-
 .tarjeta1 {
   flex-direction: column;
-  grid-area: tarjeta1;
   border-style: solid;
   border-radius: 20px;
   border-color: #3d884a; }
 
 .tarjeta2 {
   flex-direction: column;
-  grid-area: tarjeta2;
   margin-top: 30px;
   border-style: solid;
   border-radius: 20px;
@@ -300,7 +250,6 @@ footer {
 
 .tarjeta3 {
   flex-direction: column;
-  grid-area: tarjeta3;
   margin-top: 30px;
   border-style: solid;
   border-radius: 20px;
@@ -308,14 +257,6 @@ footer {
 
 /* ---------- Mobile c --------- */
 @media only screen and (max-width: 1200px) {
-  .containerc {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
-    grid-template-areas: "headerc" "mainc" "footerc"; }
-  /* .mainc {
-        display: flex;
-        flex-direction: column;
-    } */
   .tarjetasg {
     font-size: 30px; }
   .tarjeta1 {
@@ -352,12 +293,11 @@ footer {
   .article__images .img-thumbnail {
     background-color: #6462cc; }
 
+.intro2 {
+  text-shadow: 4px 1px 7px rgba(255, 255, 255, 0.78); }
+
 /* ------------ mobile placas d ----------- */
 @media only screen and (max-width: 620px) {
-  .containerd {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
-    grid-template-areas: "headerd" "maind" "footerd"; }
   .maind {
     display: flex;
     flex-direction: column; }
@@ -402,7 +342,6 @@ footer {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%); }
   .card img {
-    /* width: 100%; */
     max-height: 150px; }
   .card .contenido {
     padding: 15px;
@@ -445,78 +384,3 @@ footer {
     .card img {
       height: 150px;
       max-width: 100%; } }
-
-/* ------ Sorteo ------ */
-.mainz {
-  height: 100vh;
-  color: #4c00ff;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  grid-template-areas: "card" "primary";
-  align-items: start;
-  background-image: url("../img/jinx.jpg");
-  background-position: center;
-  background-size: cover; }
-  @media (min-width: 720px) {
-    .mainz {
-      grid-template-columns: 70% auto;
-      grid-template-rows: 100%;
-      grid-template-areas: "primary card"; } }
-  .mainz section.card {
-    grid-area: card;
-    background-color: white;
-    margin: 1em auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    width: 80%; }
-    @media (min-width: 720px) {
-      .mainz section.card {
-        align-self: flex-end;
-        margin: 1em; } }
-    .mainz section.card ul, .mainz section.card .mainz {
-      list-style-type: none;
-      /* text-align: start; */ }
-      .mainz section.card ul li, .mainz section.card .mainz li {
-        margin-bottom: 10px; }
-        .mainz section.card ul li .bullet, .mainz section.card .mainz li .bullet {
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background-color: #e855e8;
-          margin-right: 10px; }
-        .mainz section.card ul li strong, .mainz section.card .mainz li strong {
-          display: inline-block;
-          margin-left: 40px; }
-  .mainz section.primary {
-    grid-area: primary;
-    padding: 25px; }
-    @media (min-width: 720px) {
-      .mainz section.primary {
-        text-align: left;
-        margin: 4em 0 0 4em; } }
-    .mainz section.primary h1 {
-      font-size: 3em;
-      font-color: #4c00ff;
-      font-margin-top: 10px; }
-      @media (min-width: 720px) {
-        .mainz section.primary h1 {
-          font-size: 6em; } }
-    .mainz section.primary p {
-      font-size: 1.4em;
-      color: violet; }
-    .mainz section.primary a {
-      background-color: #e855e8;
-      color: #901490;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      padding: 25px;
-      display: block;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center; }
-      @media (min-width: 720px) {
-        .mainz section.primary a {
-          display: inline-block; } }
